@@ -11,3 +11,15 @@
   background-size: cover;
   height: $height;
 }
+//mixin created to clear out the float. Instead of having to use html
+
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+  }
+  &:after {
+    clear:both;
+  }
+}

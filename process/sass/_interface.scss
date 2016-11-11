@@ -1,3 +1,10 @@
+$color-btn-text: $color-background;
+$color-btn-default: $color-main;
+$color-btn-hot: $red;
+$color-btn-cool: $blue;
+$color-btn-rebecca: $purple;
+
+
 .btn {
   display: inline-block;
   text-align: center;
@@ -9,4 +16,22 @@
   border-radius: 5px;
   user-select: none;
   white-space: nowrap;
+  color: $color-btn-text;
+}
+
+.btn-default {
+  @extend .btn;
+  background-color: $color-btn-default;
+}
+.btn-cool {
+  @extend .btn;
+  background-color: $color-btn-cool;
+}
+.btn-hot {
+  @extend .btn;
+  background-color: $color-btn-hot;
+}
+.btn-rebecca {
+  @extend .btn;
+  background-color: $color-btn-rebecca;
 }

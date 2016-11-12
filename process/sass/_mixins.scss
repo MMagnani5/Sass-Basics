@@ -35,4 +35,8 @@
   } 
 }
 
-
+@mixin break($length) {
+  @media (min-width: $length){
+    @content;
+  }
+}

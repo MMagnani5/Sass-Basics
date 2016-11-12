@@ -15,7 +15,7 @@ table{
     > tr {
 
       &:hover {
-        background-color: darken(adjust-hue($red, -10deg), 20%);
+        background-color: darken(adjust-hue($red, -10deg), 30%);
       }
 
       &:nth-child(even) {

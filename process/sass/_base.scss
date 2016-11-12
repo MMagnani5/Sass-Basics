@@ -16,7 +16,17 @@ body {
   margin: 0 auto;
 }
 
+$color-headlines: $blue, $red, $yellow, $green, $purple $orange;
+
+
+
 h1,h2,h3,h4,h5,h6{
   $font-family: $font-highlight;
-  color:$color-headlines ;
+ 
+}
+// Loop to target all the headings
+@for $item from 1 through length($color-headlines) {
+  h#{$item} {
+    color: nth($color-headlines, $item);
+  }
 }

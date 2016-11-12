@@ -20,7 +20,19 @@ $roundness: 20px 0 20px 0;
   color: $color-btn-text;
 }
 
-.btn-default {
+$color-btn-names: 'default', 'hot', 'cool', 'rebecca';
+$color-btn-values: $color-main, $red, $blue, $purple;
+
+@each $name in $color-btn-names {
+  $i: index($color-btn-names, $name);
+
+  .btn-#{$name} {
+    @extend .btn;
+    background-color: nth($color-btn-values, $i);
+  }
+}
+
+/*.btn-default {
   @extend .btn;
   background-color: $color-btn-default;
 }
@@ -35,7 +47,7 @@ $roundness: 20px 0 20px 0;
 .btn-rebecca {
   @extend .btn;
   background-color: $color-btn-rebecca;
-}
+} */
 
 .grid{
   @include clearfix;

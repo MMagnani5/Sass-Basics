@@ -35,3 +35,17 @@ $color-btn-rebecca: $purple;
   @extend .btn;
   background-color: $color-btn-rebecca;
 }
+
+.grid{
+  @include clearfix;
+  .item{
+    float: left;
+    @include imagegrid(5, 1%);
+  }
+  img {
+    display: block;
+    border-radius: 10px;
+    max-width: 100%;
+  }
+}
+
